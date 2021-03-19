@@ -1,0 +1,48 @@
+.head-card-list{
+    margin: 60px 0 30px 0;
+}
+.head-card-list h1{
+    font-weight: 700;
+    font-size: 24px;
+}
+.head-card-list a{
+    margin-left: auto;
+    color: #adadad;
+}
+.table{
+    border: 1px solid #e5e5e5;
+}
+.number-input input{
+    width: 100%;
+}
+.number-input {
+    padding: 15px 10%;
+}
+
+.pr-img{
+    width: 100%;
+    display: inline-block;
+}
+.pr-img img{
+    width: 50%;
+    padding: 20px;
+}
+.table form button {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    padding: 0;
+    border-radius: 15px;
+}
+.card-btn{
+    display: flex;
+    width: 100%;
+    margin: 30px 0;
+}
+.card-btn h1{
+    margin-top: 8px;
+}
+.card-btn a{
+    margin-left: auto;
+}
