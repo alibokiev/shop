@@ -615,6 +615,7 @@ font-size: 30px;
 .product-hover ul li{
     flex-direction: row-reverse;
     border: 1px solid #e5e5e5;
+    width: inherit;
 }
 
 .product-hover ul li a img{
