@@ -70,7 +70,7 @@ class Product extends AbstractModel
 
     public function all($categoryIds = [], $limit = self::NUMBER_PRODUCTS_PER_PAGE, $offset = 0)
     { 
-        $where = !empty($categoryIds) ? " WHERE cp.category_id IN (" . implode(',',$categoryIds) . ")" : '';
+        $where = (!empty($categoryIds) && is_array($categoryIds)) ? " WHERE cp.category_id IN (" . implode(',',$categoryIds) . ")" : '';
         
         $result = mysqli_query($this->conn , "SELECT * FROM products WHERE id IN (SELECT products.id 
             FROM products 
@@ -85,13 +85,12 @@ class Product extends AbstractModel
  
     public function getNumberPage($categoryIds = [], $limit = self::NUMBER_PRODUCTS_PER_PAGE)
     {
-        $where = (!empty($categoryIds) && !empty($categoryIds)) ? " WHERE category_id IN (" . implode(',', $categoryIds) . ")" : '';
+        $where = (!empty($categoryIds) ?? is_array($categoryIds)) ? ", category_product cp WHERE p.id=cp.product_id AND cp.category_id IN (" . implode(',', $categoryIds) . ")" : '';
 
         $result = mysqli_query($this->conn , "SELECT 
-        count(*) 
-        FROM 
-        products $where");
-         
+        count(p.id) from 
+        products p $where");
+
         $result =  mysqli_fetch_all($result, MYSQLI_ASSOC);
         $result = reset($result);
         return floor(reset($result)/Product::NUMBER_PRODUCTS_PER_PAGE);
