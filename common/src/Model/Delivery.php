@@ -1,6 +1,7 @@
 <?php
 
 include_once __DIR__ . "/../Service/DBConnector.php";
+
 class Delivery extends AbstractModel
 {
     public $id;

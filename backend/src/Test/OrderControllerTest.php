@@ -33,8 +33,6 @@ class OrderControllerTest extends AbstractTest
 
         (new FixtureBasket($this->conn))->run();
         (new FixtureBasketItem($this->conn))->run();
-        // (new FixtureOrders($this->conn))->run();
-        // (new FixtureOrderItem($this->conn))->run();
 
         $_POST = [
             'name'=>'Aliiii',

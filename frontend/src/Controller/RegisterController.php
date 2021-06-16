@@ -22,7 +22,7 @@ class RegisterController
 
         if(!empty($_POST)){
             $user = new User(
-                ((int)$_POST['id']) ?? null,
+                (intval($_POST['id'])) ?? null,
                 htmlspecialchars($_POST['name']),
                 htmlspecialchars($_POST['phone']),
                 htmlspecialchars($_POST['email']),

@@ -12,6 +12,7 @@ class AuthController
     {
         $this->securityService = new SecurityService();
     }
+    
     public function check()
     {
        $email = htmlspecialchars($_POST['login']);

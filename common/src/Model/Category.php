@@ -75,10 +75,6 @@ class Category extends AbstractModel
 
     public function getByGroupsIds($groups = [])
     {
-        // $where = '';
-        // if(!empty($groups)){
-        //     $where = ' WHERE group_id IN (' . implode(',',$groups) . ')';
-        // }
         $result = mysqli_query($this->conn , "SELECT * FROM category_group");
         
         return  mysqli_fetch_all($result, MYSQLI_ASSOC);

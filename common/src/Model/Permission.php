@@ -6,12 +6,10 @@ class Permission extends AbstractModel
 {
     public $permission;
 
-    private $conn;
-
     public function __construct( 
         $permission = null)
     {
-        $this->conn = DBConnector::getInstance()->connect();
+       parent::__construct();
 
         $this->permission = $permission;
     }

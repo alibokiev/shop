@@ -23,7 +23,7 @@ class ProductController
             if(!isset($_GET['id'])){
                 throw new Exception("ID not exist", 400);
             }
-            $id = (int)$_GET['id'];
+            $id = intval($_GET['id']);
     
             if (empty($id)) {
                 throw new Exception("ID is empty", 400);

@@ -151,7 +151,7 @@ class User extends AbstractModel
         }
 
         $accesses = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
+        
         foreach($accesses as $access){
             if($access) return true;
         }

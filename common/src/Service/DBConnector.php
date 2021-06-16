@@ -6,8 +6,8 @@ class DBConnector
     private static $instance;
     public function __construct(
         $host = "localhost", 
-        $user = "shop_user",
-        $password = "shop_password",
+        $user = "root",
+        $password = "SODLEYla0102",
         $db = "db_shop")
     {
         $this->connect = mysqli_connect(

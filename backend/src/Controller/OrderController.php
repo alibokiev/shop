@@ -29,13 +29,13 @@ class OrderController  extends AbstructController
     public function update()
     {
         if(!empty($_POST)){
-            $id = (int)$_POST['id'];
-            $delivery = (int)$_POST['delivery_id'];
-            $payment = (int)$_POST['payment_id'];
+            $id = intval($_POST['id']);
+            $delivery = intval($_POST['delivery_id']);
+            $payment = intval($_POST['payment_id']);
             $name = htmlspecialchars($_POST['name']);
             $phone = htmlspecialchars($_POST['phone']);
             $email = htmlspecialchars($_POST['email']);
-            $status = (int)$_POST['status'];
+            $status = intval($_POST['status']);
             $updated = date('Y-m-d H:i:s', time());
             // TODO Need develop
             $total=0;
@@ -49,7 +49,7 @@ class OrderController  extends AbstructController
 
             header("location: /?model=order&action=read");
         }
-        $one = (new Order())->getById((int)$_GET['id']);
+        $one = (new Order())->getById(intval($_GET['id']));
 
         include_once __DIR__ . "/../../views/orders/form.php";
     }

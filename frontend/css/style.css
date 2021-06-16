@@ -55,13 +55,13 @@ header {
 
 #search-in {
     width: 70%;
-    margin: auto 0% auto 15%;
+    margin: auto 0 auto 15%;
 }
 #search-in form input{
     border: 8px solid white;
     height: 48px;
     width: 414px;
-    border-radius: 3px 0px 0px 3px;
+    border-radius: 3px 0 0 3px;
     outline: none;
 }
 
@@ -83,7 +83,7 @@ header {
     border: none;
     background: #ffd200 left center no-repeat;
     width: 45px;
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0 3px 3px 0;
     outline: none;
 }
 
@@ -142,8 +142,7 @@ header {
     margin-left: 1%;
 }
 .navigator-a .call-us-free{
-        margin: auto 0% auto 16%;
-        text-decoration: underline;
+        margin: auto 0 auto 16%;
         font-size: 15px;
         color: #bbbbbb;
         text-decoration: none;
@@ -204,7 +203,7 @@ header {
 	left: calc(50% - 21px);
 	padding: 5px 9px 1px;
 	border-radius: 15px;
-	width: 30pxpx;
+	width: 30px;
 }
 
 .navigator-a li:hover .sub-menu {

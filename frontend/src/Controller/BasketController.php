@@ -35,8 +35,8 @@ class BasketController
 
     public function addProduct()
     {
-        $productId = (int)$_POST['product_id'];
-        $quantity = (int)$_POST['quantity'];
+        $productId = intval($_POST['product_id']);
+        $quantity = intval($_POST['quantity']);
 
         if(empty($productId) || empty($quantity)){
             throw new Exception("Empty Product!");
@@ -69,8 +69,8 @@ class BasketController
     {
         
         $this->basketService->deleteBasketItem(
-            (int)$this->basket['id'],
-            (int)$_POST['product_id']);
+            intval($this->basket['id']),
+            intval($_POST['product_id']));
                
         $this->redirectToBasket();
     }
@@ -78,9 +78,9 @@ class BasketController
     public function change()
     {
         $this->basketService->updateBasketItem(
-            (int)$this->basket['id'],
-            (int)$_POST['product_id'],
-            (int)$_POST['quantity']);
+            intval($this->basket['id']),
+            intval($_POST['product_id']),
+            intval($_POST['quantity']));
             
         $this->redirectToBasket();
     }

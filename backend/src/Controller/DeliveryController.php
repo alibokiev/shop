@@ -35,7 +35,7 @@ class DeliveryController extends AbstructController
 
     public function update()
     {
-        $id = (int)$_GET['id'];
+        $id = intval($_GET['id']);
 
         if (empty($id)) die('Undefined ID !!!');
 
@@ -48,7 +48,7 @@ class DeliveryController extends AbstructController
 
     public function delete()
     {
-        $id = (int)$_GET['id'];
+        $id = intval($_GET['id']);
         (new Delivery())->deleteById($id);
         return $this->read();
     }

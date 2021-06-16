@@ -37,7 +37,7 @@ class ShopController  extends AbstructController
     }
 
     public function update(){
-        $id = (int)$_GET['id'];
+        $id = intval($_GET['id']);
 
         if (empty($id)) die('Undefined ID !!!');
 
@@ -50,7 +50,7 @@ class ShopController  extends AbstructController
 
     public function delete()
     {
-        $id = (int)$_GET['id'];
+        $id = intval($_GET['id']);
         (new Shop())->deleteById($id);
         return $this->read();
     }

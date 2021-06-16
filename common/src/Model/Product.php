@@ -9,6 +9,10 @@ class Product extends AbstractModel
 
     public $id;
     public $title;
+    /**
+     * @var string
+     * @valid {"regx": "1"}
+     */
     public $picture;
     public $preview;
     public $content;
@@ -79,6 +83,13 @@ class Product extends AbstractModel
             $where) 
             order by id desc
             limit $offset, $limit");
+            
+        return  mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+
+    public function getAllForExport()
+    { 
+        $result = mysqli_query($this->conn , "SELECT * FROM products order by id desc");
             
         return  mysqli_fetch_all($result, MYSQLI_ASSOC);
     }

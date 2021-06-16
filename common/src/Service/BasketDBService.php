@@ -77,15 +77,10 @@ class BasketDBService extends BasketService
 
         if(!isset($user['login'])){
             return [];
-
-            // throw new Exception('No permision',403);
         }
 
         $basket = BasketDBService::getBasketByUserId($user['id']);
 
-        // $this->basketService = new BasketSessionService();
-        // $this->basketService = new BasketCookieService();
-
-        return (new BasketDBService())->getBasketProducts((int)$basket['id']);
+        return (new BasketDBService())->getBasketProducts(intval($basket['id']));
     }
 }

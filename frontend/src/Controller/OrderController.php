@@ -13,8 +13,6 @@ class OrderController
     private $conn;
     public function __construct($conn = null)
     {
-        // $this->basketService = new BasketCookieService();
-
         if(!empty($conn)) {
             $this->conn = $conn; 
             $this->basketService = new BasketDBService($conn);
@@ -33,8 +31,8 @@ class OrderController
             $name = htmlspecialchars($_POST['name']);
             $phone = htmlspecialchars($_POST['phone']);
             $email = htmlspecialchars($_POST['email']);
-            $delivery = (int)$_POST['delivery'];
-            $payment = (int)$_POST['payment'];
+            $delivery = intval($_POST['delivery']);
+            $payment = intval($_POST['payment']);
             $comment = htmlspecialchars($_POST['comment']);
             $userId = UserService::getCurrentUser()['id'] ?? 0;
             $total = 0;
@@ -65,7 +63,7 @@ class OrderController
         }
 
         foreach($items as $item){
-            $orderItem = new OrderItem($orderId,(int)$item['product_id'],(int)$item['quantity']);
+            $orderItem = new OrderItem($orderId,intval($item['product_id']),intval($item['quantity']));
             if(!empty($this->conn)){
                 $orderItem->setConn($this->conn);
             }
@@ -79,7 +77,7 @@ class OrderController
 
     public function success()
     {
-        $orderId = (int)$_GET['order_id'];
+        $orderId = intval($_GET['order_id']);
 
         include_once __DIR__ . "/../../views/order/success.php";
     }

@@ -14,9 +14,9 @@ class CategoryController  extends AbstructController
             $category = new Category(
                 intval($_POST['id']),
                 htmlspecialchars($_POST['title']), 
-                (int)($_POST['group_id']), 
-                (int)($_POST['parent_id']),
-                (int)($_POST['prior']),
+                intval($_POST['group_id']), 
+                intval($_POST['parent_id']),
+                intval($_POST['prior']),
                 $now, 
                 $now
             );
@@ -39,7 +39,7 @@ class CategoryController  extends AbstructController
     }
 
     public function update(){
-        $id = (int)$_GET['id'];
+        $id = intval($_GET['id']);
 
         if (empty($id)) die('Undefined ID !!!');
 
@@ -52,7 +52,7 @@ class CategoryController  extends AbstructController
 
     public function delete()
     {
-        $id = (int)$_GET['id'];
+        $id = intval($_GET['id']);
         (new Category())->deleteById($id);
         return $this->read();
     }

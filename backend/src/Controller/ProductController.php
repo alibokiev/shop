@@ -1,9 +1,12 @@
 <?php
 
-include_once __DIR__."/AbstructController.php";
+include_once __DIR__ . "/AbstructController.php";
 include_once __DIR__ . "/../../../common/src/Model/Product.php";
 include_once __DIR__ . "/../../../common/src/Service/FileUploader.php";
 include_once __DIR__ . "/../../../common/src/Service/UserService.php";
+include_once __DIR__ . "/../../../common/src/Service/ValidationService.php";
+include_once __DIR__ . "/../../../common/src/Service/MessageService.php";
+include_once __DIR__ . "/../../../common/src/Service/ProductValidation.php";
 
 class ProductController extends AbstructController
 {
@@ -14,14 +17,24 @@ class ProductController extends AbstructController
             $filename = FileUploader::upload('products');
             $now = date('Y-m-d H:i:s', time());
 
+            $_POST['picture'] = $filename;
+            
+            if(!ProductValidation::validate()){
+                if(!empty($_POST['id'])) {
+                    return $this->update($_POST['id']);
+                }else{
+                    return $this->create();
+                }
+            }
+            
             $product = new Product(
                 intval($_POST['id']),
                 htmlspecialchars($_POST['title']), 
                 htmlspecialchars($filename ?? ''), 
                 htmlspecialchars($_POST['preview']), 
                 htmlspecialchars($_POST['content']), 
-                (int)($_POST['price']), 
-                (int)($_POST['status']), 
+                intval($_POST['price']), 
+                intval($_POST['status']), 
                 $now, 
                 $now
             );
@@ -43,8 +56,8 @@ class ProductController extends AbstructController
         include_once __DIR__ . "/../../views/product/form.php";
     }
 
-    public function update(){
-        $id = (int)$_GET['id'];
+    public function update($id = null){
+        $id = !empty($id) ? $id : intval($_GET['id']);
 
         if (empty($id)) die('Undefined ID !!!');
 
@@ -57,7 +70,7 @@ class ProductController extends AbstructController
 
     public function delete()
     {
-        $id = (int)$_GET['id'];
+        $id = intval($_GET['id']);
         (new Product())->deleteById($id);
         return $this->read();
     }

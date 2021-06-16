@@ -1,10 +1,8 @@
 <?php
     include_once __DIR__ . "/../heder.php";
 ?>
-  
-  <!-- Content Wrapper. Contains page content -->
+
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -18,10 +16,8 @@
             </ol>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
+      </div>
     </section>
-
-    <!-- Main content -->
     <section class="content">
       <div class="card">        
         <div class="card-body p-0">
@@ -49,11 +45,6 @@
                         <td><?=$p['created']?></td>
                         <td><?=$p['updated']?></td>
                         <td class="project-actions text-right">
-                            <!-- <a class="btn btn-primary btn-sm" href="#">
-                                <i class="fas fa-folder">
-                                </i>
-                                View
-                            </a> -->
                             <a class="btn btn-info btn-sm" href="/index.php?model=product&action=update&id=<?=$p['id']?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
@@ -70,15 +61,10 @@
                 </tbody>
             </table>
         </div>
-        <!-- /.card-body -->
       </div>
-      <!-- /.card -->
-
     </section>
-    <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
 
-  <?php
+<?php
     include_once __DIR__ . "/../footer.php";
 ?>

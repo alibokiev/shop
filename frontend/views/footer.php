@@ -3,10 +3,10 @@
             <div class="row">
                 <div class="features "> 
                     <ul>
-                        <li><a href="#"><img src="images/free-shopping.png" alt=""><br>Free shipping</a><span><br>Free Shipping on World wide Order </br>Over $99.</span></li>
-                        <li><a href="#"><img src="images/trusted-pay.png" alt=""><br>Trusted pay</a><span><br>100% Payment Protection & </br>Easy Return</span></li>
-                        <li><a href="#"><img src="images/secured-pay.png" alt=""><br>Secured payment</a><span><br>All Major Credit & Debit Cards</br> Accepted</span></li>
-                        <li><a href="#"><img src="images/shop-on-app.png" alt=""><br>Shop on app</a><span><br>Just Dowload our App & Shop </br>With Best Offers!</span></li>
+                        <li><a href="#"><img src="./images/free-shopping.png" alt=""><br>Free shipping</a><span><br>Free Shipping on World wide Order </br>Over $99.</span></li>
+                        <li><a href="#"><img src="./images/trusted-pay.png" alt=""><br>Trusted pay</a><span><br>100% Payment Protection & </br>Easy Return</span></li>
+                        <li><a href="#"><img src="./images/secured-pay.png" alt=""><br>Secured payment</a><span><br>All Major Credit & Debit Cards</br> Accepted</span></li>
+                        <li><a href="#"><img src="./images/shop-on-app.png" alt=""><br>Shop on app</a><span><br>Just Dowload our App & Shop </br>With Best Offers!</span></li>
                     </ul>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="singingup-tn">
                         <div class="su-tn ">
-                            <div class="su"><img  src="images/news-letter.png" alt=""></div><div class="news-letter">SIGNUP to NEWSLETTER</div>
+                            <div class="su"><img  src="./images/news-letter.png" alt=""></div><div class="news-letter">SIGNUP to NEWSLETTER</div>
                             <div id = "e-mail-address">
                                 <form action="#">
                                     <input placeholder="Enter You E-mail Address" type="text" name="e-mail-address">
@@ -26,22 +26,22 @@
                             <div class="follow-us">
                                 <h2>Keep in touch</h2>
                                 <ul>
-                                    <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
-                                    <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
-                                    <li><a href="#"><img src="images/insta.png" alt=""></a></li>
-                                    <li><a href="#"><img src="images/pinterest.png" alt=""></a></li>
-                                    <li><a href="#"><img src="images/vimeo.png" alt=""></a></li>
+                                    <li><a href="#"><img src="./images/twitter.png" alt=""></a></li>
+                                    <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+                                    <li><a href="#"><img src="./images/insta.png" alt=""></a></li>
+                                    <li><a href="#"><img src="./images/pinterest.png" alt=""></a></li>
+                                    <li><a href="#"><img src="./images/vimeo.png" alt=""></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="follow-us-mb">
                             <h2>Keep in touch</h2>
                             <ul>
-                                <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/insta.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/pinterest.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/vimeo.png" alt=""></a></li>
+                                <li><a href="#"><img src="./images/twitter.png" alt=""></a></li>
+                                <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+                                <li><a href="#"><img src="./images/insta.png" alt=""></a></li>
+                                <li><a href="#"><img src="./images/pinterest.png" alt=""></a></li>
+                                <li><a href="#"><img src="./images/vimeo.png" alt=""></a></li>
                             </ul>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                 <nav class="">
                     <div class="footer-data">
                         <div class="footer-logo">
-                            <img src="images/logo2.png" alt="">
+                            <img src="./images/logo2.png" alt="">
                         <h2>SUPERMART</h2> 
                         </div>
                         <ul>

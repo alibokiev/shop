@@ -3,10 +3,15 @@
 ?>
 <div class="content-wrapper" style="min-height: 1372.62px; padding: 1% 15%;">
     <h1>Products</h1>
-   <div class="card card-primary">
+    <div class="card card-primary">
         <div style="background-color: #343a40;" class="card-header">
                 <h3>Create product</h3>
         </div>
+        <?php 
+            $errorMessage = MessageService::displayError();
+            if(!empty($errorMessage)) : ?>
+                <div class="alert alert-danger"><?=$errorMessage?></div>
+        <?php endif; ?>
         <form action="/index.php?model=product&action=save" method="post" enctype="multipart/form-data">
             <div class="card-body"> 
                 <input type="hidden" value="<?=$one['id'] ?? ''?>"  name="id">
@@ -14,7 +19,6 @@
                     <label for="">Title</label>
                     <input type="text" value="<?=$one['title'] ?? ''?>" name="title" class="form-control">
                 </div>
-
                 <div class="form-group">
                     <label for="exampleInputFile">Picture</label>
                     <div class="input-group">

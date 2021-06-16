@@ -8,7 +8,7 @@
                         <div class="category-menu-list">
                             <ul>
                             <?php foreach(CategoryService::getGroups() as $groups) : ?>
-                                <li><a href="/?model=product&action=all&category_id=<?=$groups['id']?>"><img alt="" src="images/fash.png"><?=$groups['title']?><img src="images/chevron-right.png"><i class="zmdi zmdi-chevron-right"></i></a>
+                                <li><a href="/?model=product&action=all&category_id=<?=$groups['id']?>"><img alt="" src="images/fash.png"><?=$groups['title']?><img src="./../images/chevron-right.png"><i class="zmdi zmdi-chevron-right"></i></a>
                                     <div class="category-menu-dropdown">
                                         <div class="category-part-1 category-common mb--30">
                                             <h4 class="categories-subtitle"> <?=$groups['title']?></h4>
@@ -34,21 +34,21 @@
                         <div class="carousel-inner">
                             <a href="#">
                                 <div class="carousel-item active">
-                                    <img  src="/../../images/banner02.png" alt="...">
+                                    <img  src="././images/banner02.png" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>Upto 50% offer </h5>
                                         <p> For all men's Collections</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img  src="/../../images/banner01.png" alt="...">
+                                    <img  src="././images/banner01.png" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                     <h5>Upto 50% offer </h5>
                                     <p> For all men's Collections</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img  src="/../../images/banner02.png" alt="...">
+                                    <img  src="././images/banner02.png" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                     <h5>Upto 50% offer </h5>
                                     <p> For all men's Collections</p>

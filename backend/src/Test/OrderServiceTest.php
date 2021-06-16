@@ -15,10 +15,6 @@ class OrderServiceTest extends AbstractTest
         $this->createTableByName('orders');
         $this->createTableByName('order_item');
 
-        // $this->copyTableByName('products');
-        // $this->copyTableByName('orders');
-        // $this->copyTableByName('order_item');
-
         $fixture = new Fixture01($this->conn);
         $fixture->run();
         $fixtureOrders = new FixtureOrders($this->conn);

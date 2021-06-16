@@ -9,7 +9,7 @@ class CommentsController
     {
         header("Content-Type: application/json");
 
-        $productId = (int)$_GET['product_id'];
+        $productId = intval($_GET['product_id']);
 
         $all = (new Comments())->getByProductId($productId);
     
@@ -19,15 +19,13 @@ class CommentsController
 
     public function create()
     {
-        // header("Content-Type: application/json");
-
         try{
 
             $data = $_POST;
 
             (new Comments(
                 null,
-                (int)$data['product_id'],
+                intval($data['product_id']),
                 htmlspecialchars($data['name']),
                 htmlspecialchars($data['email']),
                 htmlspecialchars($data['avatar']),
